@@ -1,0 +1,40 @@
+
+
+<div class="card my-5">
+    <div class="card-body centered">
+        <div class="card" style="width: 60rem;">
+            <img class="card-img-top" src="{{recipe.picture}}" alt="Card image cap" style="height: 25rem;">
+           
+            <div class="card-body">
+              <h5 class="card-title c1 text-center">{{recipe.title}}</h5>
+              <div class="row">
+                <div class="col-lg">
+                    <h4>Ingredients</h4>
+                    <p class="card-text">{{recipe.ingredients}}</p>
+
+                </div>
+                <div class="col-lg">
+                    <h4>Instructions</h4>
+                    <p class="card-text">{{recipe.instructions}}</p>   
+
+                </div>
+                
+                 
+            </div>
+              
+                       
+            </div>
+            
+            <div class="row centered">
+                <a href="{{recipe.source}}" class="btn c1 btn-space">View Source</a>
+                <a [routerLink]="['/edit/' + recipe.id]" class="btn c1 btn-space">Edit</a>
+                <button  class="btn btn-danger btn-space" (click)="delete(recipe)">Delete</button>
+                <button  class="btn btn-primary btn-space" [routerLink]="['/recs']">Cancel</button>
+
+            </div>
+           
+            
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+.b1{
+    background-color:#00BFA5;
+    color:#fff;
+}
+
+.c1{
+    background-color: #009688;
+    color:#fff;
+}
+.c2{
+    background-color: #00BFA5;
+    color:#fff;
+}
+
+.font1{
+    color: #333;
+}
+.w1{
+    color: #fff;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-space {
+    margin-right: 5px;
+}
+
+.fa {
+    padding: 7px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 0px;
+    
+  }
+  
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  

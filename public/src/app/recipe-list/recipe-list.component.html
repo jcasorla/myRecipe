@@ -1,0 +1,44 @@
+<!-- <div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rec of recipe">
+            <td>{{ rec.id }}</td>
+            <td><a [routerLink]="['/view/'+ rec.id]">{{ rec.title }}</a> </td>
+            <td><button class="btn btn-primary" [routerLink]="['/edit/' + rec.id]">Edit</button> | <button class="btn btn-primary" (click)="delete(rec)">Delete</button></td>
+           
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+
+
+  <div class="card my-5">
+    <div class="card-body">
+      <div class="row">
+        <div *ngFor="let rec of recipe">
+          <div class="card btn-space" style="width: 18rem;">
+            <a [routerLink]="['/view/'+ rec.id]"><img class="card-img-top" src="{{rec.picture}}" alt="Card image cap" style="height: 10rem;"></a>
+            
+            <div class="card-body">
+              <h5 class="card-title c1 text-center">{{rec.title}}</h5>
+              <a [routerLink]="['/view/'+ rec.id]" class="btn c1 centered">View Recipe</a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        
+    </div>
+  </div>
+
+

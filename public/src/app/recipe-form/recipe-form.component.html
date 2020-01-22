@@ -1,0 +1,86 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #recipeForm="ngForm">
+        <div class="form-row">
+          <div class="form-group col-lg-4">
+            <label for="title" class="required">Title</label>
+            <input type="text" [(ngModel)]="recipe.title" 
+              class="form-control" name="title" placeholder="Enter title"
+              required #title="ngModel">
+              <div *ngIf="(title.touched || title.dirty) && title.errors">
+                <div *ngIf="title?.errors?.required" class="alert alert-danger">
+                  Title is required
+                </div>
+                
+            </div>
+              <!-- <div [hidden]="!title.pristine" class="alert alert-danger">Title is required</div> -->
+          </div>
+          
+          <div class="form-group col-lg-4">
+            <label for="source" class="required">Source</label>
+            <input type="text" [(ngModel)]="recipe.source" 
+              class="form-control" name="source" placeholder="Enter source url of recipe"
+              required #source="ngModel">
+              <div *ngIf="(source.touched || source.dirty) && source.errors">
+                <div *ngIf="source?.errors?.required" class="alert alert-danger">
+                  Source is required
+                </div>
+                
+            </div>
+            <!-- <div [hidden]="!source.pristine" class="alert alert-danger">Source is required</div> -->
+          </div>
+          <div class="form-group col-lg-4">
+            <label for="picture" class="required">Picture</label>
+            <input type="text" [(ngModel)]="recipe.picture" 
+              class="form-control" name="source" placeholder="Enter picture url of recipe"
+              required #picture="ngModel">
+              <div *ngIf="(picture.touched || picture.dirty) && picture.errors">
+                <div *ngIf="picture?.errors?.required" class="alert alert-danger">
+                  Picture is required
+                </div>
+                
+            </div>
+            <!-- <div [hidden]="!picture.pristine" class="alert alert-danger">Picture is required</div> -->
+          </div>
+
+        </div>
+       
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+              <label for="ingredients" class="required">Ingredients</label>
+              
+              <textarea class="form-control"  name="ingredients" cols="4" rows="4" [(ngModel)]="recipe.ingredients"
+              required
+              #ingred="ngModel" placeholder="Enter ingredients of recipe"></textarea>
+              <div *ngIf="(ingred.touched || ingred.dirty) && ingred.errors">
+                  <div *ngIf="ingred?.errors?.required" class="alert alert-danger">
+                      Ingredients is required
+                  </div>
+                  
+              </div>
+      
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="instructions" class="required">Instructions</label>
+            
+            <textarea class="form-control"  name="instructions" cols="4" rows="4" [(ngModel)]="recipe.instructions"
+            required
+            #inst="ngModel" placeholder="Enter instructions of recipe"></textarea>
+            <div *ngIf="(inst.touched || inst.dirty) && inst.errors">
+                <div *ngIf="inst?.errors?.required" class="alert alert-danger">
+                    Instructions is required
+                </div>
+                
+            </div>
+    
+        </div>
+
+
+      </div>
+        
+        <button type="submit" [disabled]="!recipeForm.form.valid" 
+          class="btn c1 btn-space">Submit</button>
+        <button  class="btn btn-danger btn-space" [routerLink]="['/recs']">Cancel</button>
+      </form>
+    </div>
+  </div>
