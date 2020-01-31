@@ -32,7 +32,7 @@
           <div class="form-group col-lg-4">
             <label for="picture" class="required">Picture</label>
             <input type="text" [(ngModel)]="recipe.picture" 
-              class="form-control" name="source" placeholder="Enter picture url of recipe"
+              class="form-control" name="picture" placeholder="Enter picture url of recipe"
               required #picture="ngModel">
               <div *ngIf="(picture.touched || picture.dirty) && picture.errors">
                 <div *ngIf="picture?.errors?.required" class="alert alert-danger">

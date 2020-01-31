@@ -12,7 +12,7 @@ export class HttpService {
 
   constructor(private _http: HttpClient){
     
-	  this.recipeURL="http://localhost:8080/recs";
+	  this.recipeURL="http://localhost:8080/api/recs";
     
 }
 public findAll(): Observable<Recipe[]> {
